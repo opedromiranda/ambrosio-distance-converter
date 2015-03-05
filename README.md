@@ -3,6 +3,9 @@
 First ever plugin for Ambrosio.
 Converts distance lengths to different units.
 
+[![BuildStatus](https://travis-ci.org/opedromiranda/ambrosio-distance-converter.svg)](https://travis-ci.org/opedromiranda/ambrosio-distance-converter)
+
+
 ### Version
 0.0.1
 
