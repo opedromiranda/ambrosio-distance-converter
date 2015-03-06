@@ -35,7 +35,7 @@ var metrics = map[string]string{
 
 var Converter = ambrosio.Behaviour{
 	"^([0-9][\\.[0-9]*]?)*[ ]?(km|mile|miles|meter|m|meters) (to|2) (kilometer|kilometers|km|mile|miles)$",
-	func(matches []string) (string, bool) {
+	func(matches []string) (string, error) {
 		var buffer bytes.Buffer
 
 		distance, _ := strconv.ParseFloat(matches[1], 64)
@@ -49,6 +49,6 @@ var Converter = ambrosio.Behaviour{
 		buffer.WriteString(parsedDestMetric)
 
 		result := distance * conversions[buffer.String()]
-		return strconv.FormatFloat(result, 'f', 5, 64), false
+		return strconv.FormatFloat(result, 'f', 5, 64), nil
 	},
 }
