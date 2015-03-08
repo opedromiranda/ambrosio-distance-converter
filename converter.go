@@ -52,3 +52,7 @@ var Converter = ambrosio.Behaviour{
 		return strconv.FormatFloat(result, 'f', 5, 64), nil
 	},
 }
+
+var Behaviours = []ambrosio.Behaviour{
+	Converter,
+}

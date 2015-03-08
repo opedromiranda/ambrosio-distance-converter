@@ -22,7 +22,7 @@ import (
 func main() {
 	steve := ambrosio.NewAmbrosio("Steve")
 
-    steve.Behaviours = steve.NewBehaviour(ambrosio_distance_converter.Converter);
+    steve.NewBehaviour(ambrosio_distance_converter.Behaviours);
 
 	steve.Listen(3000)
 }
